@@ -14,5 +14,5 @@ body {
     color: black;
     text-shadow:
         6px 6px 4px gray,     /* 第一層陰影 */
-        10px 10px 6px silver; /* 第二層更偏右下 */
+        12px 12px 8px silver; /* 第二層更偏右下 */
 }
