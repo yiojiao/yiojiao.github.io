@@ -7,10 +7,10 @@ body {
 
 .orange-shadow {
     color: black;
-    text-shadow: 8px 8px 6px orange;  /* 第一行：明顯橘色陰影 */
+    text-shadow: 12px 8px 5px orange;  /* 第一行：明顯橘色陰影 */
 }
 
 .gray-silver-shadow {
     color: black;
-    text-shadow: 6px 6px 4px gray, 14px 14px 6px silver;  /* 第二層銀色陰影 - 更偏右下 */
+    text-shadow: 12px 8px 5px gray, 24px 16px 10px silver;  /* 第二層銀色陰影 - 更偏右下 */
 }
