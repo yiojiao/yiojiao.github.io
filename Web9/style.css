@@ -12,7 +12,5 @@ body {
 
 .gray-silver-shadow {
     color: black;
-    text-shadow:
-        6px 6px 4px gray,      /* 第一層灰色陰影 */
-        14px 14px 6px silver;  /* 第二層銀色陰影 - 更偏右下 */
+    text-shadow: 6px 6px 4px gray, 14px 14px 6px silver;  /* 第二層銀色陰影 - 更偏右下 */
 }
