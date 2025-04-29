@@ -1,113 +1,62 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>導覽示範</title>
+    <title>導覽與回到頂部</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
+        /* 導覽列項目橫向排列 */
+        li {
+            display: inline;
+            margin-right: 20px;
         }
 
-        /* 導覽列樣式 */
-        .navbar {
+        /* 回到頂部按鈕右下角固定 */
+        #i {
             position: fixed;
-            top: 0;
-            width: 100%;
+            right: 20px;
+            bottom: 20px;
             background-color: #333;
             color: white;
             padding: 10px;
-            text-align: center;
-            z-index: 999;
-        }
-
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
             text-decoration: none;
-            display: inline-block;
-        }
-
-        .navbar a:hover {
-            background-color: #575757;
-        }
-
-        /* 長頁面區塊 */
-        .section {
-            padding: 100px 20px;
-            margin-top: 60px;
-        }
-
-        #section1 { background-color: #f4f4f4; }
-        #section2 { background-color: #e2e2e2; }
-        #section3 { background-color: #ccc; }
-
-        /* 回到頂部按鈕樣式 */
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
             border-radius: 5px;
-            display: none;
-            z-index: 1000;
         }
 
-        #backToTop:hover {
-            background-color: #555;
+        /* 假設下方有長內容區塊 */
+        .section {
+            height: 800px;
+            padding: 20px;
         }
+
+        #section1 { background-color: #f2f2f2; }
+        #section2 { background-color: #dcdcdc; }
+        #section3 { background-color: #bcbcbc; }
     </style>
 </head>
 <body>
 
     <!-- 導覽列 -->
-    <div class="navbar">
-        <a href="#section1">區塊 1</a>
-        <a href="#section2">區塊 2</a>
-        <a href="#section3">區塊 3</a>
-    </div>
+    <ul id="top">
+        <li><a href="#section1">nav 1</a></li>
+        <li><a href="#section2">nav 2</a></li>
+        <li><a href="#section3">nav 3</a></li>
+    </ul>
 
-    <!-- 區塊內容 -->
+    <!-- 三個內容區塊 -->
     <div id="section1" class="section">
-        <h2>第一區塊</h2>
-        <p>這是一個很長的段落...</p>
+        <h3>這是區塊 1</h3>
     </div>
 
     <div id="section2" class="section">
-        <h2>第二區塊</h2>
-        <p>這是第二段內容...</p>
+        <h3>這是區塊 2</h3>
     </div>
 
     <div id="section3" class="section">
-        <h2>第三區塊</h2>
-        <p>這是第三段內容...</p>
+        <h3>這是區塊 3</h3>
     </div>
 
-    <!-- 回到頂部按鈕 -->
-    <button id="backToTop" onclick="scrollToTop()">↑ 回到頂部</button>
-
-    <script>
-        // 顯示／隱藏按鈕
-        window.onscroll = function () {
-            const btn = document.getElementById("backToTop");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
-
-        // 滑動回頂部
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    </script>
+    <!-- 回到頂部連結 -->
+    <a id="i" href="#top">↑ BACK</a>
 
 </body>
 </html>
