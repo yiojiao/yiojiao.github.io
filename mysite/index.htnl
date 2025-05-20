@@ -1,0 +1,9 @@
+from django.http import HttpResponse
+
+def home(request):
+    if 'user' not in request.COOKIES:
+        response = HttpResponse("Hi U1243054")
+        response.set_cookie("user", "U1243054")
+        return response
+    else:
+        return HttpResponse("歡迎回來, U1243054")
